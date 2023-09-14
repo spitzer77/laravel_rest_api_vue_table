@@ -124,8 +124,9 @@
                                         </button>
                                         Bathrooms
                                         <button type="submit" @click.prevent="sortItems('bathrooms', 'desc')"
-                                                class="focus:outline-none" :class="{ active: isDescActive.bathrooms }">
-                                            <span class="arrow-icon-down"></span>
+                                                class="focus:outline-none">
+                                            <span class="arrow-icon-down"
+                                                  :class="{ active: isDescActive.bathrooms }"></span>
                                         </button>
                                     </th>
                                     <th scope="col" class="px-6 py-4">
@@ -179,7 +180,8 @@
                                     </div>
                                     <div>
                                         <p class="font-bold">No result where found</p>
-                                        <p class="text-sm">Make sure you know that you have filtered by existing data.</p>
+                                        <p class="text-sm">Make sure you know that you have filtered by existing
+                                            data.</p>
                                     </div>
                                 </div>
                             </div>
@@ -273,8 +275,12 @@ export default {
         },
 
         sortItems(field, by) {
-            for (const key in this.isAscActive) { this.isAscActive[key] = false }
-            for (const key in this.isDescActive) { this.isDescActive[key] = false }
+            for (const key in this.isAscActive) {
+                this.isAscActive[key] = false
+            }
+            for (const key in this.isDescActive) {
+                this.isDescActive[key] = false
+            }
 
             this.isAscActive[field] = by === 'asc';
             this.isDescActive[field] = by === 'desc';
@@ -286,9 +292,15 @@ export default {
         },
 
         clearFilters() {
-            for (const key in this.filters) {this.filters[key] = '' }
-            for (const key in this.isAscActive) { this.isAscActive[key] = false }
-            for (const key in this.isDescActive) {this.isDescActive[key] = false }
+            for (const key in this.filters) {
+                this.filters[key] = ''
+            }
+            for (const key in this.isAscActive) {
+                this.isAscActive[key] = false
+            }
+            for (const key in this.isDescActive) {
+                this.isDescActive[key] = false
+            }
 
             this.filters.sortBy = ''
             this.filters.sortDirection = ''
@@ -301,6 +313,7 @@ export default {
 
 <style scoped>
 @import "font-awesome/css/font-awesome.css";
+
 .arrow-icon-down::after {
     content: "▼";
     color: grey;
