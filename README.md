@@ -10,13 +10,13 @@ There should be some sort of searching indicator, a spinning icon or similar.
 - Clearing filters and sorting
 - Sorting columns in both directions
 - Handling form errors and no results
-- Searching indicator for loading filter data
 
 ### Features
 
 - Support for filtering across multiple columns
 - Sorting works for only one field at a time
 - The default number of automatically generated data entries is 20, with the option to specify more
+- Searching indicator for loading filter data
 
 ## Stack
 - Back-end: PHP 8, Laravel 10, SQlite
