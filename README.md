@@ -10,6 +10,7 @@ There should be some sort of searching indicator, a spinning icon or similar.
 - Clearing filters and sorting
 - Sorting columns in both directions
 - Handling form errors and no results
+- Searching indicator for loading filter data
 
 ### Features
 
@@ -24,7 +25,7 @@ There should be some sort of searching indicator, a spinning icon or similar.
 ## System requirements:
 PHP 8.1+, PHP SQLite lib, Git, NPM, Composer (PHP 8.1+)
 
-## Install on Ubuntu VPS:
+## Install on Ubuntu VPS or WSL:
 
 1) Clone the repository: <b>sudo git clone https://github.com/spitzer77/laravel_rest_api_vue_table.git vue_table</b>
 2) Enter the directory laravel-map-marker: <b>cd vue table</b>
@@ -39,7 +40,7 @@ PHP 8.1+, PHP SQLite lib, Git, NPM, Composer (PHP 8.1+)
 8) Build the project: <b>npm run build</b>
 9) Run webserver:<br>
 **Apache2**: put <i>DocumentRoot /var/www/laravel_rest_api_vue_table/public</i> to _<Virtualhost *:8814>_<br>
-**nginx**: put '_root /var/www/laravel_rest_api_vue_table/public_' to _server { /settings/ }_
+**nginx**: put _root /var/www/laravel_rest_api_vue_table/public_ to _server { /settings/ }_
 
 ## Install on Windows
 
