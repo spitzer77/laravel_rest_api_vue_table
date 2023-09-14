@@ -1,66 +1,58 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Task
+- Create an API route using Laravel that allows the data to be searched
+- Create a basic search form that will query the API using AJAX and display the results it receives from the backend. The searching result should be rendering to HTML table dynamically on the frontend, using reactive Vue.js.
+There should be some sort of searching indicator, a spinning icon or similar.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Main functionality of the task:
 
-## About Laravel
+- Displaying data in a table with a specified number of rows
+- Filtering data in the table across all columns
+- Clearing filters and sorting
+- Sorting columns in both directions
+- Handling form errors and no results
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Support for filtering across multiple columns
+- Sorting works for only one field at a time
+- The default number of automatically generated data entries is 20, with the option to specify more
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Stack
+- Back-end: PHP 8, Laravel 10, SQlite
+- Front-end: Inertia + Vue3, Axios, Tailwind CSS 
 
-## Learning Laravel
+## System requirements:
+PHP 8.1+, PHP SQLite lib, Git, NPM, Composer (PHP 8.1+)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Install on Ubuntu VPS:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1) Clone the repository: <b>sudo git clone https://github.com/spitzer77/laravel_rest_api_vue_table.git vue_table</b>
+2) Enter the directory laravel-map-marker: <b>cd vue table</b>
+3) Install Composer dependencies: <b>composer install</b>
+4) Install npm dependencies: <b>npm install</b>
+5) Set appropriate permissions: <b>chmod 777 -R ./storage/</b>
+6) Create a new SQLite database:
+- <b>touch database/database.sqlite</b>
+- <b>chmod 777 -R ./database/</b>
+- <b>chmod 777 -R ./database/database.sqlite</b>
+7) Run database migrations: <b>php artisan migrate --seed</b>
+8) Build the project: <b>npm run build</b>
+9) Run webserver:<br>
+**Apache2**: put <i>DocumentRoot /var/www/laravel_rest_api_vue_table/public</i> to _<Virtualhost *:8814>_<br>
+**nginx**: put '_root /var/www/laravel_rest_api_vue_table/public_' to _server { /settings/ }_
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Install on Windows
 
-## Laravel Sponsors
+1) Clone the repository: <b>git clone https://github.com/spitzer77/laravel_rest_api_vue_table.git vue_table</b>
+2) Enter the directory <b>vue_table</b>
+3) Install Composer dependencies: <b>composer install</b>
+4) Install npm dependencies: <b>npm install</b>
+5) Run database migrations: <b>php artisan migrate</b> (say 'yes' to create sqlite database)
+6) Build the project: <b>npm run build</b>
+7) Run laravel php webserver: <b>php artisan serve</b> or external locally running web server
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Run app:
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1) Run page app (http://127.0.0.1:8000/table on local machine or http://your_server:your_port/table on external server)
+2) Use arrows to sort data, the form to filter data, and the 'Сlear' button to clear data. 
+3) To verify error handling just fill numbers in the 'Name' filter field or letters in other filter fields, and click 'Apply filter'. 
