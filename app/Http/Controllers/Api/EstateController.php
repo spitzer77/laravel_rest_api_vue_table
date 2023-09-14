@@ -47,7 +47,7 @@ class EstateController extends Controller
 
         if ($validation->fails()) {
             $errors = $validation->errors()->all();
-            return response()->json(['error' => true, 'data' => null, 'message' => $errors], 406);
+            return response()->json(['error' => true, 'data' => null, 'message' => $errors], 200);
         }
 
         $data = Estate::query();
@@ -70,7 +70,7 @@ class EstateController extends Controller
         $result = $data->get();
 
         if (empty($result->toArray())) {
-            return response()->json(['error' => false, 'message' => 'Data is empty', 'data' => null], 204);
+            return response()->json(['error' => false, 'message' => 'Data is empty', 'data' => null], 200);
         } else {
             return response()->json(['error' => false, 'message' => 'Get data success', 'data' => $result], 200);
         }
