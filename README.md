@@ -19,7 +19,7 @@ There should be some sort of searching indicator, a spinning icon or similar.
 
 ## Stack
 - Back-end: PHP 8, Laravel 10, SQlite
-- Front-end: Inertia + Vue3, Axios, Tailwind CSS 
+- Front-end: HTML5, Inertia + Vue3, Axios, Tailwind CSS 
 
 ## System requirements:
 PHP 8.1+, PHP SQLite lib, Git, NPM, Composer (PHP 8.1+)
