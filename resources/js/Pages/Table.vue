@@ -12,45 +12,45 @@
                                         <div class="flex items-center space-x-1">
                                             <div>
                                                 <input type="text" v-model="filters.name"
-                                                       class="w-32 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                       class="w-32 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                                        placeholder="Name">
                                             </div>
                                             <div>
                                                 <input type="text" v-model="filters.price_from"
-                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                                        placeholder="Price from">
                                             </div>
                                             <div>
                                                 <input type="text" v-model="filters.price_to"
-                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                                        placeholder="Price to">
                                             </div>
                                             <div>
                                                 <input type="text" v-model="filters.bedrooms"
-                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                                        placeholder="Bedrooms">
                                             </div>
                                             <div>
                                                 <input type="text" v-model="filters.bathrooms"
-                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                                        placeholder="Bathrooms">
                                             </div>
                                             <div>
                                                 <input type="text" v-model="filters.storeys"
-                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                                        placeholder="Storeys">
                                             </div>
                                             <div>
                                                 <input type="text" v-model="filters.garages"
-                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                       class="w-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                                        placeholder="Garages">
                                             </div>
                                             <button type="submit" @click.prevent="getData()"
-                                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
                                                 Apply filter
                                             </button>
                                             <button type="submit" @click.prevent="clearFilters()"
-                                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
                                                 Clear
                                             </button>
                                             <div class="text-center" v-if="filtering" style="margin-left: 10px;">
@@ -78,7 +78,7 @@
                             </div>
 
                             <table v-else-if="items" class="min-w-full text-left text-sm font-light mt-2">
-                                <thead class="border-b font-medium dark:border-neutral-500 bg-gray-100">
+                                <thead class="border-b font-medium bg-gray-100">
                                 <tr>
                                     <th scope="col" class="px-6 py-4 text-left">
                                         <button type="submit" @click.prevent="sortItems('name', 'asc')"
@@ -156,7 +156,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr v-for="item in items" class="border-b dark:border-neutral-500">
+                                <tr v-for="item in items" class="border-b">
                                     <td class="whitespace-nowrap px-6 py-4 font-medium">{{ item.name }}</td>
                                     <td class="whitespace-nowrap px-6 py-4">{{ item.price }}</td>
                                     <td class="whitespace-nowrap px-6 py-4">{{ item.bedrooms }}</td>
@@ -282,8 +282,16 @@ export default {
                 this.isDescActive[key] = false
             }
 
-            this.isAscActive[field] = by === 'asc';
-            this.isDescActive[field] = by === 'desc';
+            this.isAscActive[field] = (by === 'asc');
+            this.isDescActive[field] = (by === 'desc');
+
+            // Human view of code this.isAscActive[field] = (by === 'asc');
+            // if (by === 'asc') {
+            //     isAscending = true;
+            // } else {
+            //     isAscending = false;
+            // }
+            // this.isAscActive[field] = isAscending;
 
             this.filters.sortBy = by;
             this.filters.sortDirection = field;

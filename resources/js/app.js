@@ -21,14 +21,3 @@ createInertiaApp({
         color: '#4B5563',
     },
 });
-
-//import { createApp } from 'vue/dist/vue.esm-bundler';
-// import HelloVue from './Components/HelloVue.vue';
-//
-// const app = createApp({
-//     components: {
-//         'hello-vue' : HelloVue
-//     }
-// });
-//
-// app.mount('#app');

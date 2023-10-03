@@ -52,8 +52,6 @@ class EstateController extends Controller
 
         $data = Estate::query();
 
-        //echo $data->exists();
-
         if ($request->input('name')) $data->where('name', 'like', '%' . $request->input('name') . '%');
         if ($request->input('price_from')) $data->where('price', '>', $request->input('price_from'));
         if ($request->input('price_to')) $data->where('price', '<', $request->input('price_to'));
@@ -74,6 +72,5 @@ class EstateController extends Controller
         } else {
             return response()->json(['error' => false, 'message' => 'Get data success', 'data' => $result], 200);
         }
-
     }
 }
